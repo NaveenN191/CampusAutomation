@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="CampusAutomationSuite" parallel="tests" thread-count="2">
+
+  <listeners>
+    <listener class-name="com.campus.CampusAutomation.listeners.TestListeners"/>
+  </listeners>
+
+  <test name="LoginTests">
+    <classes>
+      <class name="com.campus.CampusAutomation.tests.LoginTest"/>
+    </classes>
+  </test>
+
+  <test name="HomePageTests">
+    <classes>
+      <class name="com.campus.CampusAutomation.tests.HomePageTest"/>
+    </classes>
+  </test>
+
+</suite>

@@ -1,0 +1,8 @@
+com\campus\CampusAutomation\tests\HomePageTest.class
+com\campus\CampusAutomation\pages\LoginPage.class
+com\campus\CampusAutomation\BaseClass.class
+com\campus\CampusAutomation\reports\ExtentManager.class
+com\campus\CampusAutomation\reports\ExtentTestManager.class
+com\campus\CampusAutomation\listeners\TestListeners.class
+com\campus\CampusAutomation\pages\HomePage.class
+com\campus\CampusAutomation\tests\LoginTest.class

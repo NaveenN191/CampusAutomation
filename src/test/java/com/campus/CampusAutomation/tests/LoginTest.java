@@ -1,0 +1,22 @@
+package com.campus.CampusAutomation.tests;
+
+import org.testng.annotations.Test;
+import com.campus.CampusAutomation.BaseClass;
+import com.campus.CampusAutomation.pages.LoginPage;
+
+public class LoginTest extends BaseClass {
+
+    @Test
+    public void verifyLogin() {
+
+        // Open website
+        driver.get("http://3.108.179.14:8081/superadmin/login.html?error=true");
+
+        // Create LoginPage object
+        LoginPage lp = new LoginPage(driver);
+
+        // Perform login
+        lp.loginToCampus("admin", "admin123");
+
+    }
+}
