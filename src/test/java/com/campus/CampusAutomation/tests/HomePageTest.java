@@ -3,6 +3,7 @@ package com.campus.CampusAutomation.tests;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,7 +13,7 @@ import org.testng.annotations.Test;
 import com.campus.CampusAutomation.BaseClass;
 import com.campus.CampusAutomation.pages.HomePage;
 
-import io.netty.handler.timeout.TimeoutException;
+
 
 public class HomePageTest extends BaseClass {
 
