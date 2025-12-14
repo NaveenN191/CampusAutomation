@@ -23,7 +23,7 @@ public class HomePageTest extends BaseClass {
 	    try {
 	        Thread.sleep(2000); // wait for UI to settle
 	        WebElement aboutLink = wait.until(ExpectedConditions.visibilityOfElementLocated(
-	                By.xpath("//a[contains(translate(text(),'ABOUT','about'),'about')]")));
+	                By.xpath("//button[@aria-label='About Us']")));
 	        aboutLink.click();
 	        System.out.println("✅ Successfully clicked on 'About' link");
 	    } catch (TimeoutException e) {

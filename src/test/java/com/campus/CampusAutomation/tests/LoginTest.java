@@ -8,15 +8,13 @@ public class LoginTest extends BaseClass {
 
     @Test
     public void verifyLogin() {
-
-        // Open website
+        // Open login page
         driver.get("http://3.108.179.14:8081/superadmin/login.html?error=true");
 
-        // Create LoginPage object
+        // Use LoginPage object
         LoginPage lp = new LoginPage(driver);
-
-        // Perform login
         lp.loginToCampus("admin", "admin123");
 
+        System.out.println("✅ Login test executed successfully");
     }
 }
