@@ -18,15 +18,16 @@ import com.campus.CampusAutomation.pages.HomePage;
 public class HomePageTest extends BaseClass {
 
 	@Test
-	public void clickAllButtons() {
+	public void clickAllButtons() throws InterruptedException {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	    try {
-	        // Wait for the 'About' link to be visible and clickable
-	     WebElement aboutLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'About')]")));
+	        Thread.sleep(2000); // wait for UI to settle
+	        WebElement aboutLink = wait.until(ExpectedConditions.visibilityOfElementLocated(
+	                By.xpath("//a[contains(translate(text(),'ABOUT','about'),'about')]")));
 	        aboutLink.click();
 	        System.out.println("✅ Successfully clicked on 'About' link");
 	    } catch (TimeoutException e) {
-	        System.out.println("❌ Element not found: 'About' link not visible or clickable within 15 seconds");
+	        System.out.println("❌ Test failed: Element not found or clickable within 15 seconds");
 	        Assert.fail("Test failed: Element not found - 'About' link");
 	    }
 	}
