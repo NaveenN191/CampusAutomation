@@ -8,7 +8,7 @@ public class LoginTest extends BaseClass {
 
     @Test
     public void verifyLogin() {
-        // testing jenkins auto build trigger
+        // Jenkins polling auto-trigger test
     	
         driver.get("http://3.108.179.14:8081/superadmin/login.html?error=true");
 
